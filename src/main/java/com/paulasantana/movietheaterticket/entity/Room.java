@@ -2,17 +2,29 @@ package com.paulasantana.movietheaterticket.entity;
 
 import jakarta.persistence.*;
 
+import java.util.UUID;
+
 @Entity
 public class Room {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    private UUID id;
 
     @Enumerated(EnumType.STRING)
     private Type type;
     private int seats;
 
-    public Long getId() {
+    @Deprecated
+    public Room() {
+    }
+
+    public Room(Type type, int seats) {
+        this.type = type;
+        this.seats = seats;
+    }
+
+
+    public UUID getId() {
         return id;
     }
 
