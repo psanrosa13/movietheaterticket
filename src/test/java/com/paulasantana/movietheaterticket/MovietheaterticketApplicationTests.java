@@ -1,4 +1,4 @@
-package com.example.movietheaterticket;
+package com.paulasantana.movietheaterticket;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
